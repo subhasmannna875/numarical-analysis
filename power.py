@@ -1,11 +1,12 @@
-#Use a for loop and list append method to generate the powers-of-2 list
+# performance improvement by moving the 2 ** X expression outside the loop
 L = []
 X = 5
+power_of_X = 2 ** X  # Compute 2 ** X outside the loop
 
 for i in range(7):
     L.append(2 ** i)
 
-if 2 ** X in L:
-    print('at index', L.index(2 ** X))
+if power_of_X in L:
+    print('at index', L.index(power_of_X))
 else:
     print(X, 'not found')

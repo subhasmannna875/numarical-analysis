@@ -1,13 +1,11 @@
-# using while else  construction
+# using for- else  construction
 L = [1, 2, 4, 8, 16, 32, 64]
 X = 5
-i = 0
 
-while i < len(L):
-    if 2 ** X == L[i]:
-        print('at index', i)
-        break
-    i = i + 1
-else:
+try:
+    index = L.index(2 ** X)
+    print('at index', index)
+except ValueError:
     print(X, 'not found')
+
 
